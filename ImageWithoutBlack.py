@@ -26,7 +26,7 @@ def count_zero(src):
 def remove_image_black(root_head, threshold):
     for root, dirs, files in os.walk(root_head):
         print(root)
-        root_rm = root.replace("faces_copy", "faces_rm")
+        root_rm = root.replace("faces_2", "faces_2_rm")
         if not os.path.exists(root_rm):
             os.mkdir(root_rm)
         for file in files:
@@ -51,10 +51,10 @@ def remove_image_black(root_head, threshold):
 
 if __name__ == "__main__":
     threshold = 0.005
-    root_head = r"J:\WIT_Face\faces_copy"
+    root_head = r"/media/gzzn/WITAI//WIT_Face/faces_2"
     remove_image_black(root_head, threshold)
 
-    root_head = r"J:\XT_Face\faces_copy"
+    root_head = r"/media/gzzn/WITAI//XT_Face/faces_2"
     remove_image_black(root_head, threshold)
 
 
